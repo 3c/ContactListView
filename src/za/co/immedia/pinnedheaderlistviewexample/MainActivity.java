@@ -1,24 +1,12 @@
 package za.co.immedia.pinnedheaderlistviewexample;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
-import java.util.regex.Pattern;
 
 import za.co.immedia.pinnedheaderlistview.PinnedHeaderListView;
-import za.co.immedia.pinnedheaderlistview.PinnedHeaderListView.OnItemClickListener;
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ProgressBar;
 
 public class MainActivity extends Activity {
 
@@ -40,7 +28,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         proDlg = new ProgressDialog(this);
         listView = (PinnedHeaderListView) findViewById(R.id.pinnedListView);
-
+        //这是王正域的mark
         // 从arrays.xml里读取测试数据
         mString = getResources().getStringArray(R.array.fl_search_keyword);
 
@@ -70,9 +58,9 @@ public class MainActivity extends Activity {
 
             @Override
             public void onItemClick(int position) {
-                
+
                 System.out.println("model "+list.get(position));
-                
+
             }
 
             @Override
